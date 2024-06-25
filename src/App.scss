@@ -1,0 +1,149 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #edeef6;
+}
+
+#root {
+    background: #fff;
+    padding: 15px;
+    max-width: 1000px;
+    margin: 2rem auto;
+    border-radius: 15px;
+}
+
+main {
+    background: #edeef6;
+    padding: 15px;
+    border-radius: 15px;
+
+    header {
+        padding: 1rem 0 0 1rem;
+    }
+
+    .mortgage-calculator {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem 1rem;
+
+        .mortgage-calculator--number {
+            text-align: center;
+        }
+
+        .mortgage-calculator--slider, .mortgage-calculator--number {
+            width: 30%;
+
+            input {
+                width: 100%;
+            }
+
+            .slider-title-wrapper {    
+                display: flex;
+                gap: 10px;
+                font-size: 20px;
+                padding-bottom: 15px;
+            }
+        }
+
+        .mortgage-calculator--button {
+            margin-top: 2rem;
+
+            button {
+                background-color: #8c56ff;
+                color: #fff;
+                outline: none;
+                border: none;
+                border-radius: 2px;
+                padding: 1rem 2rem;
+            }
+        }
+    }
+}
+
+// SLIDER STYLING
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+    width: 26rem;
+  }
+  
+  /* Removes default focus */
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  /******** Chrome, Safari, Opera and Edge Chromium styles ********/
+  /* slider track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #8c56ff;
+    opacity: .8;
+    border-radius: 0.5rem;
+    height: 1rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    margin-top: -4px; /* Centers thumb on the track */
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  input[type="range"]:focus::-webkit-slider-thumb {
+    outline: 6px solid #8c56ff;
+    outline-offset: 0rem;
+  }
+  
+  /*********** Firefox styles ***********/
+  /* slider track */
+  input[type="range"]::-moz-range-track {
+    background-color: #8c56ff;
+    border-radius: 0.5rem;
+    height: 1rem;
+  }
+  
+  /* slider thumb */
+  input[type="range"]::-moz-range-thumb {
+    background-color: #ffffff;
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 50%;
+    border-color: #8c56ff;
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  
+  input[type="range"]:focus::-moz-range-thumb{
+    outline: 3px solid #ffffff;
+    outline-offset: 0.125rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      header {
+        h1 {
+            font-size: 28px;
+        }
+      }
+
+      .mortgage-calculator {
+        display: block;
+
+        .mortgage-calculator--slider, .mortgage-calculator--number {
+            width: 100%;
+            margin-bottom: 35px;
+        }
+      }
+    }
+  }
